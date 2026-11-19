@@ -1,0 +1,111 @@
+% =====================================================================
+% EV-PRAC-01 · Transcripción fiel de la prueba escrita a mano
+% Compilar:  pdflatex main.tex   (dos veces)
+% =====================================================================
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[margin=2.2cm]{geometry}
+\usepackage{array,longtable}
+\usepackage{xcolor}
+\usepackage[hidelinks]{hyperref}
+
+\newcommand{\estudiante}{Rivera Suarez Jonathan Javier}
+\newcommand{\fechaprueba}{18 de noviembre de 2026}
+\newcommand{\repo}{https://github.com/jriveras4-cmyk/ISR-401-Ingenieria-Requerimientos}
+
+\newcolumntype{P}[1]{>{\raggedright\arraybackslash}p{#1}}
+% Texto que en la hoja está escrito con tinta roja (enunciados copiados)
+\newcommand{\rojo}[1]{\textcolor{red!65!black}{#1}}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+
+\begin{document}
+
+\begin{center}
+  {\large\bfseries EV-PRAC-01 · Evaluación de la Unidad I}\\[2pt]
+  Ingeniería de Requerimientos (ISR-401) · 4.\textsuperscript{o} nivel · Paralelo B\\[2pt]
+  Caso «ALERTARÍO»
+\end{center}
+
+\textbf{Estudiante:} \estudiante\\
+\textbf{Fecha:} \fechaprueba\\
+\textbf{Repositorio:} \url{\repo}
+
+\noindent\fbox{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule}{%
+Esta es la transcripción fiel de la prueba escrita a mano el \fechaprueba;
+las fotografías de las hojas están en la carpeta \texttt{evidencias/} del repositorio.}}
+
+\medskip
+{\small Nota de formato: el texto en color rojo corresponde a lo escrito con tinta roja en las hojas.}
+
+\hrule
+% ============================== HOJA #1 ==============================
+\begin{flushright}\#1\end{flushright}
+
+Nombre: Jonathan Javier Rivera Suarez\\
+Fecha: 18/11/2026
+
+\begin{center}\rojo{Evaluación Ingeniería de Requerimientos}\end{center}
+
+\section*{\rojo{T1. Conceptos aplicados al caso}}
+
+\rojo{a) Explique con sus palabras qué es un requisito según ISO/IEC/IEEE 29148 y, con esa explicación, decida si E7 y E12 son requisitos del producto alertario. Justifique cada decisión en una o dos líneas.}
+
+Es un enunciado que expresa una necesidad de un interesado, junto con sus restricciones y condiciones. Dice que característica de funcionalidad, de calidad de operación o de diseño debe tener el producto.
+
+. E7: no es un requisito del producto, cuenta como se mide hoy el nivel (la regla dice que anota desde las 6 am hasta las 6 pm y lo anota en un cuaderno), esto sirve como insumo de elicitación porque explica el problema, pero aquí describe los requisitos.
+
+. E12: tampoco es un requisito del producto, ya que fija donde se reune el equipo y quien firma el acta, esto regula como se trabaja en el proyecto, no como se comporta el software.
+
+\rojo{b). Explique que describe la especificación de los interesados (STRS), la especificación de requisitos del sistema (SyRS) y la especificación de requisitos del software (SRS) en este proyecto. Para cada una dé un enunciado del insumo A que iría ella y diga porque.}
+
+. Requisitos de los interesados (STRS).-- Recoge lo que el interesado necesita en su entorno de trabajo, en su lenguaje y sin solución.
+
+% ============================== HOJA #2 ==============================
+\begin{flushright}\#2\end{flushright}
+
+Es lo que necesita el jefe de unidad, los operadores, los presidentes barriales y los vecinos. Ejemplo: enterarnos a tiempo cuando el río empieza a crecer, aunque sea de madrugada, para sacar a la gente antes que entre el agua.
+
+. Requisitos del sistema (SyRS).-- Describe lo que debe hacer y cumplir el sistema completo: “Estaciones HL20, radio LoraWan, antena, servidor, plataforma, app, personal y personas”. Ejemplo E3: lectura cada 5 minutos por radio, con el protocolo LoraWan, a la antena del municipio.
+
+. Requisitos del software (SRS).-- Describe lo que el software debe hacer ya sea en la plataforma o en la app movil. Ejemplo E8: mapa con los niveles de las seis estaciones deberá cargarse en menos de 3 segundos aunque haya 500 usuarios conectados al mismo tiempo.
+
+\rojo{c) Para cada hecho H1 a H5 indique a que actividad del proceso IR corresponde (elicitación, analisis y negociación, especificación, validación o gestión) y si en el marco de pohl es una actividad central o transversal.}
+
+H1: Elicitación.-- La analista visita y conversa con operadores y vigilantes para conocer el proceso actual. POHL: (Central).
+
+H2: Analisis y negociación.-- Se compara radio, whatsapp y SMS y así se llegó a un acuerdo.
+
+H3. Especificación.-- se escriben los requisitos acordados en la plantilla, cond identificador único.
+
+% ============================== HOJA #3 ==============================
+\begin{flushright}\#3\end{flushright}
+
+H4: Validación.-- los interesados leen el documento y detectan el vacío de la cancelación.
+
+H5: Gestión.-- se registra el cambio, se analiza el impacto y se publica la versión 1.1.
+
+\section*{\rojo{T2. Clasificación y auditoría}}
+
+\rojo{a) Clasificación. Dibuje una tabla con las columnas ID, Tipo, Documento y Justificación, y complétela para E1 a E12. Tipo funcional; no funcional (diga la característica ISO/IEC 25010:2023); restricción; requisito de dominio; requisito de proceso; o no es requisito. Documento: STRS, SyRS, SRS o ninguno de ellos (diga donde se registra entonces). La justificación cabe en una línea.}
+
+Clasificación E1 a E12
+
+\begin{longtable}{|P{0.9cm}|P{3.6cm}|P{3.6cm}|P{6.6cm}|}
+\hline
+\textbf{ID} & \textbf{Tipo} & \textbf{Documento} & \textbf{Justificación}\\ \hline
+\endhead
+E1 & Funcional & STRS & Necesidad de recibir avisos antes de tiempo, aun no es medible y se concreta con el SRS.\\ \hline
+E2 & Requisito dominio & SRS & Es una regla del protocolo cantonal (4,5m y 5,5 m) que el software debe aplicar para clasificar el nivel)\\ \hline
+E3 & Restricción & SyRS & Los equipos ya están comprados imponen la frecuencia (5m) y el protocolo Lorawan, a la antena del municipio\\ \hline
+% ---------------------- (continúa en la HOJA #4) ----------------------
+\multicolumn{4}{r}{\#4}\\
+\multicolumn{4}{c}{\rojo{está al revés}}\\ \hline
+E4 & Ninguno; acta de constitución, plan del proyecto & Restricción, plazo y costo & Fecha límite y presupuesto limitan el proyecto.\\ \hline
+E5 & Funcional & SRS & Genera el informe mensual en pdf por estación es una función concreta del software.\\ \hline
+E6 & No funcional \rojo{fiabilidad tolerancia a fallos} & SyRS & Seguir registrando 12 horas sin energía depende del hardware (batería, respaldo de estación)\\ \hline
+E7 & No es requisito & Ninguno: insumo de elicitación. & Describe como se mide hoy\\ \hline
+\end{longtable}
+
+\end{document}
